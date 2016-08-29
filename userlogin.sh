@@ -23,8 +23,7 @@ sudo /etc/init.d/sendmail restart
 
 read -p "whats is tha mail id? : " mailid
 
-echo '#last login configuration by Devops
-echo "Hello System Admin, This for your information. ALERT!!! - Check your Server. There seems to be a Root Shell Access on:' `date` `who` | mail -s "Alert: Root Access from `who | cut -d"(" -f2 | cut -d")" -f1`" $mailid"
-' | sudo tee /root/.bashrc
+echo " #last login configuration by Devops
+echo \"Hello System Admin, This for your information. ALERT!!! - Check your Server. There seems to be a Root Shell Access on:\" \`date\` \`who\` | mail -s \"Alert: Root Access from \`who | cut -d\"(\" -f2 | cut -d\")\" -f1\`\" \"$mailid\" " >> /root/.bashrc
 
 echo " userlogin script has been added to the server Thanx for Using"
